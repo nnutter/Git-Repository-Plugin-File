@@ -2,6 +2,7 @@ requires 'Git::Repository';
 requires 'Path::Class';
 
 on 'test' => sub {
+    requires 'Class::Inspector';
     requires 'Test::More';
     requires 'Git::Repository::Plugin::Test';
 };

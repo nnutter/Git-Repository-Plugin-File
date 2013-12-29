@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 6;
+use Test::More tests => 7;
 
 use Git::Repository qw(File Test);
 use Path::Class qw();
@@ -21,6 +21,7 @@ my $message = 'committed something';
 $file->parent->mkpath;
 ok(-d $file->parent, 'parent directory exists');
 $file->openw->say($content);
+ok(-f $file, 'file exists');
 $file->add->commit('-m', $message);
 
 like($repo->run('log', '-n', 1, '--oneline'), qr/$message/, 'last commit contains expected message');

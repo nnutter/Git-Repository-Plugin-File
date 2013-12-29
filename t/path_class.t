@@ -10,14 +10,16 @@ use Path::Class qw();
 
 # blacklist some methods because they require more nuanced testing
 my @methods = grep {
-    $_ ne 'opena'
-    && $_ ne 'openr'
-    && $_ ne 'openw'
-    && $_ ne 'touch'
+    1
     && $_ ne 'carp'
     && $_ ne 'confess'
     && $_ ne 'croak'
     && $_ ne 'fastcwd'
+    && $_ ne 'new'
+    && $_ ne 'opena'
+    && $_ ne 'openr'
+    && $_ ne 'openw'
+    && $_ ne 'touch'
 } @{ Class::Inspector->methods('Path::Class::File', 'public') };
 plan tests => scalar(@methods);
 

@@ -79,7 +79,7 @@ sub args {
     } elsif ($method_name eq 'spew') {
         return 'hello';
     } elsif (grep { $method_name eq $_ } qw(as_foreign new_foreign)) {
-        return 'Win32';
+        return 'Win32', 'hello';
     } elsif (grep { $method_name eq $_ } qw(traverse traverse_if)) {
         return sub {};
     }

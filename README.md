@@ -4,7 +4,7 @@ Git::Repository::Plugin::File - Add a file() method to Git::Repository
 
 # VERSION
 
-version 0.003
+version 0.004
 
 # SYNOPSIS
 

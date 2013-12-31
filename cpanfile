@@ -1,3 +1,4 @@
+requires 'Carp';
 requires 'Git::Repository', '1.13';
 requires 'Path::Class';
 

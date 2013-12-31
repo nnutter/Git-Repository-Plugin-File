@@ -6,6 +6,8 @@ use warnings FATAL => 'all';
 
 use parent qw(Path::Class::File);
 
+use Carp qw(croak);
+
 sub _new_from_class {
     my $class = shift;
     my $repo = shift;
@@ -71,6 +73,9 @@ sub remove {
     $self->{repo}->run('rm', @args, $self);
     return not -e $self;
 }
+
+# opena wasn't added until Path::Class v0.26 but is trivial to "backport"
+sub opena { $_[0]->open('a') or croak "Can't append to $_[0]: $!" }
 
 1;
 

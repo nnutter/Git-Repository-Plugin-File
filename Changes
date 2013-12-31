@@ -1,5 +1,8 @@
 Revision history for Git::Repository::Plugin::File:
 
+0.004 2012-12-30
+ - Add missing dependency on Test::Fatal.
+
 0.003 2012-12-30
  - Specify versions on several dependencies.
 

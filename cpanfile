@@ -1,10 +1,10 @@
-requires 'Git::Repository';
+requires 'Git::Repository', '1.13';
 requires 'Path::Class';
 
 on 'test' => sub {
     requires 'Class::Inspector';
-    requires 'Test::More';
-    requires 'Git::Repository::Plugin::Test';
+    requires 'Test::More', '0.94';
+    requires 'Git::Repository::Plugin::Test', '0.002';
 };
 
 on 'develop' => sub {

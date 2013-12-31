@@ -1,5 +1,8 @@
 Revision history for Git::Repository::Plugin::File:
 
+0.005 2012-12-30
+ - "Backport" the opena method.
+
 0.004 2012-12-30
  - Add missing dependency on Test::Fatal.
 

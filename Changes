@@ -1,5 +1,8 @@
 Revision history for Git::Repository::Plugin::File:
 
+0.003 2012-12-30
+ - Specify versions on several dependencies.
+
 0.002 2012-12-28
  - Extend Path::Class::File instead of just delegating methods to it.
 

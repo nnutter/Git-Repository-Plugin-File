@@ -4,7 +4,7 @@ use warnings;
 use Test::More;
 
 use Class::Inspector qw();
-use Git::Repository qw(File Test);
+use Git::Repository qw(File TestSetUp);
 use Git::Repository::File;
 use Path::Class qw();
 

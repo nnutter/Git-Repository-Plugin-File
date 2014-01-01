@@ -3,7 +3,7 @@ use warnings;
 
 use Test::More tests => 6;
 
-use Git::Repository qw(File Test);
+use Git::Repository qw(File TestSetUp);
 use Path::Class qw();
 
 my $repo = Git::Repository->new_tmp_repo();

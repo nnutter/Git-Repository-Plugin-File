@@ -4,7 +4,7 @@ use warnings;
 use Test::More tests => 2;
 use Test::Fatal qw(exception);
 
-use Git::Repository qw(File Test);
+use Git::Repository qw(File TestSetUp);
 
 my $repo = Git::Repository->new_tmp_repo('--bare');
 

@@ -1,2 +1,2 @@
 language: perl
-script: "prove -r t/"
+script: "prove -lr t/"

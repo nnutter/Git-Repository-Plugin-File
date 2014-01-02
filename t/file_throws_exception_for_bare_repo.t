@@ -9,5 +9,5 @@ use Git::Repository qw(File TestSetUp);
 my $repo = Git::Repository->new_tmp_repo('--bare');
 
 is($repo->work_tree, undef, 'bare repo has no work_tree');
-like(exception { $repo->file('foo') }, qr/work_tree/,
-    'exception thrown when there is no work_tree');
+like(exception { $repo->file('foo') }, qr/bare/,
+    'exception thrown for bare repository');

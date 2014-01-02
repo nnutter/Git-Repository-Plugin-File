@@ -14,10 +14,10 @@ sub _new_from_class {
     my @extra = @_;
 
     unless ($repo->isa('Git::Repository')) {
-        die 'Git::Repository';
+        croak 'First argument is not a Git::Repository';
     }
     unless ($repo->work_tree) {
-        die 'work_tree';
+        croak 'Cannot create file in bare repository'
     }
 
     my $self = $class->SUPER::new($repo->work_tree, @extra);

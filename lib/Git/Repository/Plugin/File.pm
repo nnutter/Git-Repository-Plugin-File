@@ -42,8 +42,8 @@ following method:
 
 =head2 file(<dir1>, <dir2>, ..., <file>)
 
-Returns a L<Git::Repository::File|Git::Repository::File> object which behavies
-like a L<Path::Class::File|Path::Class::File> with a few additional methods;
+Returns a L<Git::Repository::File|Git::Repository::File> object which extends a
+L<Path::Class::File|Path::Class::File> with a few additional methods;
 
 =head1 SEE ALSO
 

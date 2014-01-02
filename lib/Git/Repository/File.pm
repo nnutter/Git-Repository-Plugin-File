@@ -98,23 +98,31 @@ Git::Repository::File - Objects representing files in a Git::Repository
     $file->openw->say('line one');
 
     # also provides add, commit, and remove
-    $file->add;
-    $file->commit('-m', "commit $file");
-    $file->remove;
+    $file->add->commit('-m', "commit $file");
+    $file->remove();
     $file->commit('-m', "removed $file");
 
 =head1 DESCRIPTION
 
-C<Git::Repository::File> mostly wraps <Path::Class::File>.
+C<Git::Repository::File> extends C<Path::Class::File> for use in a
+C<Git::Repository>.
 
 =head1 METHODS
 
-L<Git::Repository::File|Git::Repository::File> adds the
-following methods on to a L<Path::Class::File|Path::Class::File>-like API:
+L<Git::Repository::File|Git::Repository::File> extends/modifies
+L<Path::Class::File|Path::Class::File> with the following methods:
 
 =head2 add(@options)
 
-Does something....
+Add file contents to the index.
+
+=head2 commit(@options)
+
+Record file changes to the repository.
+
+=head2 remove(@options)
+
+Remove file from the working tree and from the index.
 
 =head1 SEE ALSO
 

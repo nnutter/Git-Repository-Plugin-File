@@ -5,7 +5,7 @@ requires 'Path::Class';
 on 'test' => sub {
     requires 'Class::Inspector';
     requires 'Test::More', '0.94';
-    requires 'Git::Repository::Plugin::Test', '0.002';
+    requires 'Git::Repository::Plugin::Test', '0.004';
     requires 'Test::Fatal';
 };
 

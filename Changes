@@ -1,5 +1,13 @@
 Revision history for Git::Repository::Plugin::File:
 
+0.006 2014-01-01
+ - Updated docs.
+ - remove() now returns the file object instead of 1.
+ - remove() now throws an exception if the file is not removed.  This strays
+   from the Path::Class::File behavior but is more consistent with the
+   Git::Repository behavior.
+ - add(), commit(), and remote() separate options and the file path with double dashes.
+
 0.005 2013-12-30
  - "Backport" the opena method.
 

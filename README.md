@@ -4,7 +4,7 @@ Git::Repository::Plugin::File - Add a file() method to Git::Repository
 
 # VERSION
 
-version 0.005
+version 0.006
 
 # SYNOPSIS
 
@@ -25,8 +25,8 @@ following method:
 
 ## file(<dir1>, <dir2>, ..., <file>)
 
-Returns a [Git::Repository::File](https://metacpan.org/pod/Git::Repository::File) object which behavies
-like a [Path::Class::File](https://metacpan.org/pod/Path::Class::File) with a few additional methods;
+Returns a [Git::Repository::File](https://metacpan.org/pod/Git::Repository::File) object which extends a
+[Path::Class::File](https://metacpan.org/pod/Path::Class::File) with a few additional methods;
 
 # SEE ALSO
 

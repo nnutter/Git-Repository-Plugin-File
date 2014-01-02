@@ -19,6 +19,7 @@ my @methods = grep {
     && $_ ne 'opena'
     && $_ ne 'openr'
     && $_ ne 'openw'
+    && $_ ne 'remove'
     && $_ ne 'touch'
 } @{ Class::Inspector->methods('Path::Class::File', 'public') };
 plan tests => scalar(@methods);

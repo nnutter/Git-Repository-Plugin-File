@@ -71,7 +71,10 @@ sub remove {
     my $self = shift;
     my @args = @_;
     $self->{repo}->run('rm', @args, '--', $self);
-    return not -e $self;
+    if (-e $self) {
+        croak "Failed to remove file: $self";
+    }
+    return $self;
 }
 
 # opena wasn't added until Path::Class v0.26 but is trivial to "backport"
@@ -122,7 +125,9 @@ Record file changes to the repository.
 
 =head2 remove(@options)
 
-Remove file from the working tree and from the index.
+Remove file from the working tree and from the index.  Unlike
+L<Path::Class::File|Path::Class::File> this will throw an exception if the file
+is not removed.
 
 =head1 SEE ALSO
 

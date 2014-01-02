@@ -54,14 +54,14 @@ sub new {
 sub add {
     my $self = shift;
     my @args = @_;
-    $self->{repo}->run('add', @args, $self);
+    $self->{repo}->run('add', @args, '--', $self);
     return $self;
 }
 
 sub commit {
     my $self = shift;
     my @args = @_;
-    $self->{repo}->run('commit', @args, $self);
+    $self->{repo}->run('commit', @args, '--', $self);
     return $self;
 }
 
@@ -70,7 +70,7 @@ sub commit {
 sub remove {
     my $self = shift;
     my @args = @_;
-    $self->{repo}->run('rm', @args, $self);
+    $self->{repo}->run('rm', @args, '--', $self);
     return not -e $self;
 }
 
